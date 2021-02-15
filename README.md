@@ -49,11 +49,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-Add whitelisted IP addresses
+- Add whitelisted IP addresses
 	- 108.14.229.26
 
 Machines within the network can only be accessed by Jump Box.
-Which machine did you allow to access your ELK VM? What was its IP address?_
+- Which machine did you allow to access your ELK VM? What was its IP address?_
 	- Personal Device, ip=108.14.229.26, via port 5601
 
 A summary of the access policies in place can be found in the table below.
@@ -68,11 +68,11 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-What is the main advantage of automating configuration with Ansible?
+- What is the main advantage of automating configuration with Ansible?
 	- Using Ansible for automating configurations allows an administrator to spend more time in the detail and accuracy of the playbook rather than having to repeat the same configuration constantly for a great number of servers.
 
 The playbook implements the following tasks:
-In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+- In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 	- Name the playbook/Point to the group of machines to be targeted
 		- name: Configure Elk VM with Docker
   hosts: elk
@@ -111,35 +111,35 @@ In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Do
           - 9200:9200
           - 5044:5044
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+- The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 	-(Images/Elk_Container_Launch_Success_CT.jpg)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-List the IP addresses of the machines you are monitoring
+- List the IP addresses of the machines you are monitoring
 	- Web-1: 10.0.0.5
 	- Web-2: 10.0.0.6
 
 We have installed the following Beats on these machines:
-Specify which Beats you successfully installed
+- Specify which Beats you successfully installed
 	- Filebeat
 	- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc.
+- In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc.
 	- Filebeat: Filebeat's data would consist of log files and their locations as specified by the administrator that completed the setup. An example of a log file that may be recorded by Filebeat is a system.auth which is prompted when establishing a connection and the system is authewnicating a user with said connection.
 	- Metricbeat: Should show data based off of statistics regarding that device for instance, in looking through the metrics of a device one should be able to locate the CPU or memory being used by said device. 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
-SSH into the control node and follow the steps below:
+- SSH into the control node and follow the steps below:
 
 - Copy the playbook file to /etc/ansible/roles.
 - Update the /etc/ansible/hosts file to include the specific ip address, and the group name, that you would like to run the mentioned playbook on. 
 - Run the playbook, and navigate to http://[Puiblic_IP_of_ELK_Server]:5601/app/kibana to check that the installation worked as expected.
 
-Answer the following questions to fill in the blanks:_
+Answer the following questions to fill in the blanks:
 - Which file is the playbook? Where do you copy it?
 	- elk_playbook.yml = used to install ELK server
 	- filebeat-playbook = used to install and configure Filebeat service on DVWA servers
@@ -150,7 +150,7 @@ Answer the following questions to fill in the blanks:_
 - Which URL do you navigate to in order to check that the ELK server is running?
 	- http://[Puiblic_IP_of_ELK_Server]:5601/app/kibana
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
+- As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
 	-Command to ssh into any machine within network:
 		**If entering the network from the public** ssh [Username]@[Public_IP_of_Machine]
 		**If moving through the network from within** ssh [Username]@[Private_IP_of_Machine]
