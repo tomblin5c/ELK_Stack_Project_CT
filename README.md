@@ -80,7 +80,7 @@ The playbook implements the following tasks:
   tasks:
 - 	- Install docker.io
 - 		- name: Install docker.io
--       apt:
+      apt:
         update_cache: yes
         force_apt_get: yes
         name: docker.io
