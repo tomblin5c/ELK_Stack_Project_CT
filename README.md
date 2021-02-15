@@ -74,10 +74,10 @@ The playbook implements the following tasks:
 - In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - 	- Name the playbook/Point to the group of machines to be targeted
 - 		- name: Configure Elk VM with Docker
-  hosts: elk
-  remote_user: azureuser
-  become: true
-  tasks:
+  		hosts: elk
+  		remote_user: azureuser
+  		become: true
+  		tasks:
 - 	- Install docker.io
 - 		- name: Install docker.io
       apt:
@@ -85,8 +85,8 @@ The playbook implements the following tasks:
         force_apt_get: yes
         name: docker.io
         state: present
-	- Install python3-pip
-		- name: Install python3-pip
+- 	- Install python3-pip
+- 		- name: Install python3-pip
       apt:
         force_apt_get: yes
         name: python3-pip
