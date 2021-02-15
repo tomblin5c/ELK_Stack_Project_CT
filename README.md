@@ -91,15 +91,15 @@ The playbook implements the following tasks:
         force_apt_get: yes
         name: python3-pip
         state: present
-	- Increase container's utilized memory
-		- name: Use more memory
+- 	- Increase container's utilized memory
+- 		- name: Use more memory
       sysctl:
         name: vm.max_map_count
         value: '262144'
         state: present
         reload: yes
-	- Download and launch ELK container/Sets Published Ports
-		- name: download and launch a docker elk container
+- 	- Download and launch ELK container/Sets Published Ports
+- 		- name: download and launch a docker elk container
       docker_container:
         name: elk
         image: sebp/elk:761
