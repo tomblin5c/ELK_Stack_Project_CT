@@ -151,20 +151,20 @@ Answer the following questions to fill in the blanks:
 
 As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
 - 	-Command to ssh into any machine within network:
-		- **If entering the network from the public** ssh [Username]@[Public_IP_of_Machine]
-		- **If moving through the network from within** ssh [Username]@[Private_IP_of_Machine]
+	- **If entering the network from the public** ssh [Username]@[Public_IP_of_Machine]
+	- **If moving through the network from within** ssh [Username]@[Private_IP_of_Machine]
 - 	-Command to add new machine IPs to /hosts file
-		- To View: cat /etc/ansible/hosts
-		- To Edit: nano /etc/ansible/hosts
-	-Command to change directories to where configuration files are located:
-		cd /etc/ansible/files
-	-Command to change directories to where playbook files are located:
-		cd /etc/ansible/roles
-	-Command to edit/view configuration files:
-		To View: cat [Configuration_Filename]
-		To Edit: nano [Configuration_Filename]
-	-Command to edit/view playbook files:
-		To View: cat [Playbook_Name]
-		To Edit: nano [Playbook_Name]
-	- Command to run any specified playbook:
-		sudo ansible-playbook [Playbook_Name]
+	- To View: cat /etc/ansible/hosts
+	- To Edit: nano /etc/ansible/hosts
+- 	-Command to change directories to where configuration files are located:
+	- cd /etc/ansible/files
+- 	-Command to change directories to where playbook files are located:
+	- cd /etc/ansible/roles
+- 	-Command to edit/view configuration files:
+	- To View: cat [Configuration_Filename]
+	- To Edit: nano [Configuration_Filename]
+- 	-Command to edit/view playbook files:
+	- To View: cat [Playbook_Name]
+	- To Edit: nano [Playbook_Name]
+- 	- Command to run any specified playbook:
+	- sudo ansible-playbook [Playbook_Name]
