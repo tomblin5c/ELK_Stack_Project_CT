@@ -111,7 +111,7 @@ The playbook implements the following tasks:
           - 5044:5044
 
 - The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-	-(Images/Elk_Container_Launch_Success_CT.jpg)
+	(Images/Elk_Container_Launch_Success_CT.jpg)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
