@@ -78,9 +78,9 @@ The playbook implements the following tasks:
   remote_user: azureuser
   become: true
   tasks:
-	- Install docker.io
-		- name: Install docker.io
-      apt:
+- 	- Install docker.io
+- 		- name: Install docker.io
+-       apt:
         update_cache: yes
         force_apt_get: yes
         name: docker.io
