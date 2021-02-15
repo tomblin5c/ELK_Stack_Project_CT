@@ -35,7 +35,6 @@ Load balancing ensures that the application will be highly available, in additio
 	- Metricbeat collects metrics from the docker servers and, like Filebeat, sends to a specified service to be indexed.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function   | IP Address | Operating System |
 |----------|------------|------------|------------------|
